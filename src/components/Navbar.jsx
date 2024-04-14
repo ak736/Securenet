@@ -62,6 +62,11 @@ const Navbar = () => {
         <button className='p-4 border-b border-gray-600'>Home</button>
         <button className='p-4 border-b border-gray-600'>About</button>
         <button className='p-4 border-b border-gray-600'>Contact</button>
+        {isAuthenticated && (
+          <li className='p-4'>
+            <h2> {user.name} </h2>
+          </li>
+        )}
         {isAuthenticated ? (
           <button
             className='p-4 border-b border-gray-600'
